@@ -7,8 +7,11 @@ const app = express()
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use(require('./rutas/usuario'))
-    // parse application/x-www-form-urlencoded
+
+//Configuración global de rutas
+app.use(require('./rutas/index'))
+
+// parse application/x-www-form-urlencoded
 
 
 // parse application/json
